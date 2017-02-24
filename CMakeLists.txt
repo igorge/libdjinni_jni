@@ -10,10 +10,10 @@ if (JNI_FOUND)
     message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
 endif()
 
-set(DJINNI_INCLUDE_DIRS ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/support-lib/jni)
+set(DJINNI_INCLUDE_DIRS ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/src/support-lib/jni)
 
 include_directories(
-        ${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_SOURCE_DIR} ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/support-lib/jni ${gie_include_dir} )
+        ${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_SOURCE_DIR} ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/src/support-lib/jni ${gie_include_dir} )
 
 set(SOURCE_FILES
         src/support-lib/jni/djinni_main.cpp
