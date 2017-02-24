@@ -3,6 +3,7 @@ project(djinni_jni)
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wno-deprecated -Wno-unused-parameter -fexceptions -frtti")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
 if(ANDROID_STL)
     message (STATUS "ANDROID BUILD DETECTED")
