@@ -3,12 +3,19 @@ project(djinni_jni)
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wno-deprecated -Wno-unused-parameter -fexceptions -frtti")
 
-find_package(JNI)
 
-if (JNI_FOUND)
-    message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
-    message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
+if(ANDROID_STL)
+    message (STATUS "ANDROID BUILD DETECTED")
+else()
+    find_package(JNI)
+
+    if (JNI_FOUND)
+        message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
+        message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
+    endif()
 endif()
+
+
 
 set(DJINNI_INCLUDE_DIRS ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/src/support-lib/jni)
 
