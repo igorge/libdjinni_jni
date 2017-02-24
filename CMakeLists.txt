@@ -27,6 +27,6 @@ set(SOURCE_FILES
         src/support-lib/jni/djinni_support.cpp
         src/support-lib/jni/djinni_main.cpp )
 
-add_library(djinni_jni STATIC ${SOURCE_FILES})
+add_library(djinni_jni SHARED ${SOURCE_FILES})
 
 target_link_libraries(djinni_jni)
