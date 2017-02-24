@@ -25,7 +25,7 @@ include_directories(
 
 set(SOURCE_FILES
         src/support-lib/jni/djinni_support.cpp
-        )
+        src/support-lib/jni/djinni_main.cpp )
 
 add_library(djinni_jni STATIC ${SOURCE_FILES})
 
