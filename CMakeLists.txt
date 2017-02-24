@@ -23,7 +23,7 @@ include_directories(
         ${CMAKE_CURRENT_BINARY_DIR} ${PROJECT_SOURCE_DIR} ${JNI_INCLUDE_DIRS} ${PROJECT_SOURCE_DIR}/src/support-lib/jni ${gie_include_dir} )
 
 set(SOURCE_FILES
-        src/support-lib/jni/djinni_main.cpp
+        #src/support-lib/jni/djinni_main.cpp
         src/support-lib/jni/djinni_support.cpp)
 
 add_library(djinni_jni STATIC ${SOURCE_FILES})
